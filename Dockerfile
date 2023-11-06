@@ -1,8 +1,20 @@
-FROM python:3.12.0a4-bullseye
+FROM python:3.12
 LABEL maintainer="lauwarm@mailbox.org"
 
-ENV streamlinkCommit=15fbab1b45e8bbe432b385c088cea2acfb8812f1
-ENV PATH "${HOME}/.local/bin:${PATH}"
+ENV streamlinkCommit=29741769a88aa71e7eb55f5e3eafa37271ef9d73
+#ENV streamlinkVersion=6.2.1
+#ENV PATH "${HOME}/.local/bin:${PATH}"
+
+#ADD https://github.com/streamlink/streamlink/releases/download/${streamlinkVersion}/streamlink-${streamlinkVersion}.tar.gz /opt/
+
+#RUN apt-get update && apt-get install gosu
+
+#RUN pip3 install versioningit
+
+#RUN tar -xzf /opt/streamlink-${streamlinkVersion}.tar.gz -C /opt/ && \
+#	rm /opt/streamlink-${streamlinkVersion}.tar.gz && \
+#	cd /opt/streamlink-${streamlinkVersion}/ && \
+#	python3 setup.py install
 
 RUN apt-get update && apt-get install gosu && apt-get install python3-pip -y
 
