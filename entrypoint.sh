@@ -12,4 +12,4 @@ echo "UID : $USER_ID \nGID : $GROUP_ID"
 chown -R $USER_ID:$GROUP_ID /home/plugins
 chown -R $USER_ID:$GROUP_ID /home/script
 
-exec gosu $USER_ID "$@"
+exec gosu "$USER_ID:$GROUP_ID" "$@"
