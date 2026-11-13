@@ -1,4 +1,4 @@
-FROM python:3.14.0-slim-trixie
+FROM python:3.14.10-slim-trixie
 LABEL maintainer="lauwarm@mailbox.org"
 
 ARG STREAMLINK_VERSION=8.6.3
