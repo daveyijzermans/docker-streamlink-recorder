@@ -1,0 +1,3 @@
+[submodule "mqtt-bridge-core"]
+	path = mqtt-bridge-core
+	url = ../mqtt-bridge-core.git

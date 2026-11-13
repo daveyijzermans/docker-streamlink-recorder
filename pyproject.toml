@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "streamlink-recorder"
+dynamic = ["version"]
+description = "A livestream recorder with its state on MQTT"
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+dependencies = ["aiomqtt>=2.0,<3", "mqtt-bridge-core", "streamlink"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools]
+packages = ["streamlink_recorder"]
+
+[tool.setuptools.dynamic]
+version = { attr = "streamlink_recorder.__version__" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "tests"]
